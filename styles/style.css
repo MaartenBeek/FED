@@ -3,3 +3,134 @@
   box-sizing:border-box;  
 }
 
+body {
+    margin: 0;
+    font-family: Helvetica Neue, sans-serif;
+}
+
+header {
+    padding: 1.2em;
+    background-color: #F4F4F4;
+    height: 4.2em;
+}
+
+header a img {
+    max-height: 100%;
+}
+
+header nav ul{
+    margin: 0;
+    display: none;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.top-section article {
+    height: 50%;
+    position: relative;
+}
+
+.top-section article h2 {
+    color: white;
+    font-size: 1.3em ;
+    font-weight: 500;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 1em;
+    
+}
+
+.top-section article:first-child {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../images/image1.jpg);
+    background-size: cover;
+}
+
+.top-section article:nth-child(2) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../images/image2.jpg);
+    background-size: cover;
+}
+
+.middle-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.middle-section article {
+    padding-bottom: 1em;
+    padding-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.middle-section article h3 {
+    margin: 0;
+    font-weight: 500;
+    color: #333333;
+    font-size: 1em;
+}
+
+.middle-section article img {
+    height: 4.5em;
+    margin-right: 1em;
+}
+
+.middle-section .live-article {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(/images/image4.jpg);
+    background-size: cover;
+    background-position: 30% 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    position: relative;
+    height: 6em;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 1em;
+    transition: .5s ease;
+    border-bottom: none;
+}
+
+.middle-section .live-article:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 10px #333;
+}
+
+.middle-section .live-article h3 {
+    color: white;
+    margin: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.middle-section .live-article div {
+    background-color: #333333;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: .3em 1em;
+}
+
+.middle-section .live-article div p {
+    font-size: .6em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.middle-section .live-article div p span {
+    color: red;
+    margin-right: 1em;
+}
+
+
+
