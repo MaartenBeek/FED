@@ -8,14 +8,26 @@ body {
     font-family: Helvetica Neue, sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     padding: 1.2em;
     background-color: #F4F4F4;
     height: 4.2em;
 }
 
+header a {
+    margin-right: 1.2em;
+}
+
+header a:first-child img {
+    width: 20px;
+}
+
 header a img {
-    max-height: 100%;
+    height: 100%;
 }
 
 header nav ul{
@@ -29,30 +41,64 @@ header nav ul{
     height: 70vh;
 }
 
-.top-section article {
+.top-section a {
+    display: block;
+    width: 100%;
     height: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.top-section article {
+    height: 100%;
     position: relative;
+    background-position: center;
+    background-size: 120%;
+    transition: ease 1s;
+}
+
+.top-section article:hover {
+    background-size: 125%;
+}
+
+.top-article-heading {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 1.5em;
+}
+
+.top-section article .video-icon {
+    width: 25px;
+    height: 25px;
+    background-color: #E61E14;
+    padding: 8px;
+    border-radius: 100%;
+    margin-bottom: 1.2em;
+}
+
+.top-section .video-icon img {
+    display: block;
+}
+
+.top-section article:hover h2 {
+    margin-bottom: .2em;
 }
 
 .top-section article h2 {
     color: white;
     font-size: 1.3em ;
     font-weight: 500;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 1em;
-    
+    margin: 0;
+    transition: .3s;
 }
 
-.top-section article:first-child {
+.top-section a:first-child article {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../images/image1.jpg);
-    background-size: cover;
 }
 
-.top-section article:nth-child(2) {
+.top-section a:nth-child(2) article {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../images/image2.jpg);
-    background-size: cover;
 }
 
 .middle-section {
@@ -67,9 +113,13 @@ header nav ul{
     margin-left: 1em;
     margin-right: 1em;
     display: flex;
-    flex-direction: row;
     align-items: center;
     border-bottom: 1px solid #f4f4f4;
+}
+
+
+.middle-section article:hover h3 {
+    color: #e61e14;
 }
 
 .middle-section article h3 {
@@ -77,11 +127,43 @@ header nav ul{
     font-weight: 500;
     color: #333333;
     font-size: 1em;
+    transition: ease .3s;
+}
+
+.middle-section article .img-wrapper {
+    overflow: hidden;
+    height: 4.5em;
+    width: 8.5em;
+    margin-right: 1em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex: none;
 }
 
 .middle-section article img {
-    height: 4.5em;
-    margin-right: 1em;
+    height: 100%;
+    transition: ease .9s;
+}
+
+.middle-section article .img-wrapper .video-icon {
+    width: 25px;
+    height: 25px;
+    background-color: #E61E14;
+    padding: 8px;
+    border-radius: 100%;
+    z-index: 1;
+    position: absolute;
+    left: .7em;
+    bottom: .7em;
+}
+
+.middle-section article .img-wrapper .video-icon img {
+    display: block;
+}
+
+.middle-section article:hover .img-wrapper img {
+    transform: scale(1.05);
 }
 
 .middle-section .live-article {
