@@ -151,6 +151,10 @@ nav ul li ul {
     transition: ease .3s;
 }
 
+.middle-section article p {
+    display: none;
+}
+
 .middle-section article .img-wrapper {
     overflow: hidden;
     height: 4.5em;
@@ -236,6 +240,167 @@ nav ul li ul {
     color: red;
     margin-right: 1em;
 }
+
+/*MEDIA QUERIES*/
+
+@media screen and (min-width: 900px) {
+    .top-section {
+        display: flex;
+        flex-direction: row;
+        height: 45vh;
+    }
+    .top-section a {
+        height: 100%;
+    }
+    .top-article-heading {
+        margin: 0;
+        width: 100%;
+    }
+    .text-align-right {
+        font-size: 1.5em;
+        padding: 1.5em;
+        padding-left: 10em;
+        text-align: right;
+    }
+    .text-align-left {
+        font-size: 1.5em;
+        padding: 1.5em;
+        padding-right: 10em;
+    }
+    
+    .middle-section {
+        margin-left: 20em;
+        margin-right: 20em;
+        margin-top: 3em ;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    .middle-section a {
+        width: 30%;
+/*        flex-basis: 30%;*/
+        margin-right: 1em;
+        margin-left: 1em;
+        margin-bottom: 2em;
+        flex-grow: 1;
+    }
+    
+    .middle-section article {
+        display: block;
+        padding: 0;
+        margin: 0;
+        border-bottom: none;
+    }
+    
+    .middle-section article h3 {
+        font-size: 1.2em;
+        margin-top: .8em;
+    }
+    
+    .middle-section article p {
+        display: block;
+        color: #333333;
+        font-size: 1em;
+        line-height: 1.5em;
+        margin: 0;
+        margin-top: .8em;
+    }
+    
+    .middle-section article .img-wrapper {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+    
+    .middle-section article img {
+        height: auto;
+        width: 100%;
+    }
+/*
+    .middle-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+    }
+
+    .middle-section article {
+        padding-bottom: 1em;
+        padding-top: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #f4f4f4;
+    }
+
+    .middle-section article h3 {
+        margin: 0;
+        font-weight: 500;
+        color: #333333;
+        font-size: 1em;
+        transition: ease .3s;
+    }
+
+    .middle-section article .img-wrapper {
+        overflow: hidden;
+        height: 4.5em;
+        width: 8.5em;
+        margin-right: 1em;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex: none;
+    }
+
+    .middle-section article img {
+        height: 100%;
+        transition: ease .9s;
+    }
+*/
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
