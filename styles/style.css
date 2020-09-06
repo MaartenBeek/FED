@@ -30,8 +30,29 @@ header a img {
     height: 100%;
 }
 
-header nav ul{
+nav {
+    overflow: hidden;
+    height: 0;
+}
+
+.show-menu {
+    height: 100%;
+}
+
+nav ul{
     margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    background-color: #F4F4F4;
+    padding: 1.2em;
+    border-top: 1px solid #e3e3e3;
+    color: #333333;
+}
+
+nav ul li ul {
     display: none;
 }
 
@@ -162,6 +183,8 @@ header nav ul{
     display: block;
 }
 
+
+/*Overflow hidden werkt niet*/
 .middle-section article:hover .img-wrapper img {
     transform: scale(1.05);
 }

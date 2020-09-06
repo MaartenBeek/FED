@@ -62,6 +62,15 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Je opdracht:** nos.nl
 
+Ik heb de website van nos gekozen omdat:
+
+⋅⋅* Ik hier mogelijkheden zie om met flexbox te werken en aangezien ik daar nooit echt mee gewerkt heb leek me dit een leuke uitdaging.
+
+⋅⋅* Er een aantal javascript uitdagingen in zitten zoals image en video sliders.
+
+⋅⋅* Ik de zoekfunctie heel saai vind en daar een vette micro interactie van wil maken.
+
+
 **Screenshot(s):**
 
 ![screenshot(s) die een goed beeld geven van de website die je gaat maken](images/nos.png)
