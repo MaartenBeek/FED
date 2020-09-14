@@ -14,6 +14,7 @@ a {
 
 header {
     padding: 1.2em;
+    padding-left: 1.4em;
     background-color: #F4F4F4;
     height: 4.2em;
 }
@@ -22,11 +23,29 @@ header a {
     margin-right: 1.2em;
 }
 
-header a:first-child img {
+header button {
+    margin: 0;
+    margin-right: 1.4em;
+    border: none;
+    padding: 0;
+    height: 100%;
+    outline: none;
+}
+
+header button:hover img {
+    filter: brightness(75%);
+}
+
+header button img {
     width: 20px;
+    transition: ease .2s;
 }
 
 header a img {
+    height: 100%;
+}
+
+header button img {
     height: 100%;
 }
 
