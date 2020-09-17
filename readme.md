@@ -48,6 +48,8 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/screen2.png)
 
+![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/screen3.png)
+
 ### Agenda voor meeting
 
 * Hoe zit het met javascript gebruik voor andere elementen dan je micro interactie. Zoals slideshows en dergelijken. Moeten deze met javascript uitgewerkt worden?
