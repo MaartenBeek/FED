@@ -518,10 +518,10 @@ main section footer a svg {
     }
     
     .detail-section {
-        margin-left: 25%;
-        margin-right: 25%;
+        margin: auto;
         padding-left: 6em;
         padding-right: 6em;
+        max-width: 860px;
     }
     
     figure {
