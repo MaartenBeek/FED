@@ -38,15 +38,19 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Stand van zaken
 
--dit ging goed & dit was lastig-
+* Flexbox en positioning gingen beide goed. Met flexbox heb ik nog wel even moeten klooien maar het kwam vrij snel goed.
+
+* Ik heb al eens stukje javascript gebruikt. Deze werkt in principe maar er zat een bug in mijn HTML die nu verholpen is. 
 
 **Screenshot(s):**
 
--screenshot(s) van hoe ver je bent-
+![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/screen1.jpg)
+
+![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/screen2.jpg)
 
 ### Agenda voor meeting
 
--samen met je groepje opstellen-
+* Hoe zit het met javascript gebruik voor andere elementen dan je micro interactie. Zoals slideshows en dergelijken. Moeten deze met javascript uitgewerkt worden?
 
 ### Verslag van meeting
 
