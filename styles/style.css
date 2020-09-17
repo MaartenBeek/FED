@@ -20,12 +20,6 @@ header {
     flex-direction: row;
 }
 
-header div {
-    background: blue;
-    display: flex;
-    align-content: center;
-}
-
 header p {
     margin: 0;
     padding: 0;
