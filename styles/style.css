@@ -12,6 +12,12 @@ a {
     text-decoration: none;
 }
 
+
+
+
+/***************HEADER***************/
+
+
 header {
     background-color: #F4F4F4;
     height: 4.2em;
@@ -43,6 +49,7 @@ header div form {
     align-items: center;
     flex-flow: 2;
     width: auto;
+    justify-content: flex-end;
 }
 
 header div form input {
@@ -60,7 +67,7 @@ header div form input {
 }
 
 .show-balk {
-    width: 250px;
+    width: 60%;
     opacity: 1;
     transform: scale(1);
 }
@@ -106,7 +113,13 @@ header button:hover svg {
     filter: brightness(75%);
 }
 
-nav {
+
+
+
+/***************NAVIGATION***************/
+
+
+#navigation {
     overflow: hidden;
     height: 0;
 }
@@ -115,12 +128,12 @@ nav {
     height: 100%;
 }
 
-nav ul{
+#navigation ul{
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+#navigation ul li {
     list-style: none;
     background-color: #F4F4F4;
     padding: 1.2em;
@@ -128,9 +141,15 @@ nav ul li {
     color: #333333;
 }
 
-nav ul li ul {
+#navigation ul li ul {
     display: none;
 }
+
+
+
+
+/***************TOP SECTION***************/
+
 
 .top-section {
     display: flex;
@@ -197,6 +216,12 @@ nav ul li ul {
 .top-section a:nth-child(2) article {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../images/image2.jpg);
 }
+
+
+
+
+/***************MIDDLE SECTION***************/
+
 
 .middle-section {
     display: flex;
@@ -282,6 +307,12 @@ nav ul li ul {
     width: 100%;
     object-fit: cover;
 }
+
+
+
+
+/***************DETAIL SECTION***************/
+
 
 .detail-section {
     padding: 1em;
@@ -393,6 +424,12 @@ main section footer a svg {
     height: 1em;
 }
 
+
+
+
+/***************FOOTER***************/
+
+
 .pagefooter {
     padding: 1em;
     background-color: #fafafa;
@@ -448,9 +485,15 @@ main section footer a svg {
     margin-bottom: 1em;
 }
 
+
+
 /*MEDIA QUERIES*/
 
 @media screen and (min-width: 900px) {
+    
+    
+    
+    /***************HEADER MQ***************/
     
     header div {
         width: 860px!important;
@@ -461,7 +504,14 @@ main section footer a svg {
         display: none;
     }
     
-    header .header-container ul {
+    header .header-container nav {
+        height: 100%;
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header .header-container nav ul {
         padding: 0;
         margin: 0;
         margin-left: 2em;
@@ -470,13 +520,13 @@ main section footer a svg {
         height: 4.2em;
     }
 
-    header .header-container ul li {
+    header .header-container nav ul li {
         list-style: none;
         padding: 0;
         margin: 0;
     }
 
-    header .header-container ul li a {
+    header .header-container nav ul li a {
         padding: 0;
         padding-left: 1.2em;
         width: 6em;
@@ -488,7 +538,7 @@ main section footer a svg {
         transition: ease .3s;
     }
     
-    header .header-container ul li a:hover {
+    header .header-container nav ul li a:hover {
         border-left: 1px #e61e14 solid;
         color: #e61e14;
     }
@@ -499,6 +549,10 @@ main section footer a svg {
         transform: scale(1);
     }
     
+    
+    
+    /***************TOP SECTION MQ***************/
+
     .top-section {
         display: flex;
         flex-direction: row;
@@ -523,6 +577,10 @@ main section footer a svg {
         padding-right: 10em;
     }
     
+    
+    
+    /***************MIDDLE SECTION MQ***************/
+
     .middle-section {
         margin-left: 20em;
         margin-right: 20em;
@@ -573,6 +631,10 @@ main section footer a svg {
         width: 100%;
     }
     
+    
+    
+    /***************DETAIL SECTION MQ***************/
+
     .detail-section {
         margin: auto;
         padding-left: 6em;

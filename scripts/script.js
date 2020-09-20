@@ -1,7 +1,6 @@
 // JavaScript Document
-var menuButton =
-    document.querySelector('#hamburger');
-var nav = document.getElementById('navigation');
+var menuButton = document.querySelector('#hamburger');
+var nav = document.getElementById('#navigation');
 
 menuButton.addEventListener('click', toonMenu)
     
