@@ -33,6 +33,10 @@ header .header-container div {
     flex-grow: 1;
 }
 
+header .header-container ul {
+    display: none;
+}
+
 header div form {
     height: 100%;
     display: flex;
@@ -444,11 +448,6 @@ main section footer a svg {
     margin-bottom: 1em;
 }
 
-
-
-
-
-
 /*MEDIA QUERIES*/
 
 @media screen and (min-width: 900px) {
@@ -456,6 +455,48 @@ main section footer a svg {
     header div {
         width: 860px!important;
         margin: auto;
+    }
+    
+    header button:first-child {
+        display: none;
+    }
+    
+    header .header-container ul {
+        padding: 0;
+        margin: 0;
+        margin-left: 2em;
+        display: flex;
+        flex-direction: row;
+        height: 4.2em;
+    }
+
+    header .header-container ul li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    header .header-container ul li a {
+        padding: 0;
+        padding-left: 1.2em;
+        width: 6em;
+        margin: 0;
+        color: #333333;
+        line-height: 4.2em;
+        height: 100%;
+        border-left: 1px #e3e3e3 solid;
+        transition: ease .3s;
+    }
+    
+    header .header-container ul li a:hover {
+        border-left: 1px #e61e14 solid;
+        color: #e61e14;
+    }
+    
+    header div form input {
+        width: 250px;
+        opacity: 1;
+        transform: scale(1);
     }
     
     .top-section {
