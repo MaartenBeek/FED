@@ -16,20 +16,63 @@ header {
     background-color: #F4F4F4;
     height: 4.2em;
     display: flex;
-    align-content: center;
-    flex-direction: row;
 }
 
-header p {
+header .header-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+}
+
+header .header-container div {
+    display: flex;
+    align-items: center;
     margin: 0;
     padding: 0;
-    display: block;
+    flex-grow: 1;
+}
+
+header div form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: 2;
+    width: auto;
+}
+
+header div form input {
+    height: 50%;
+    width: 0px;
+    border: none;
+    border-radius:2.1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    outline: none;
+    opacity: 0;
+    transition: ease 1s;
+    transform: scale(.5);
+    transform-origin: center right;
+}
+
+.show-balk {
+    width: 250px;
+    opacity: 1;
+    transform: scale(1);
+}
+
+header div button:last-child img {
+    transition: ease .3s;
+}
+
+header div button:last-child:hover img {
+    filter: brightness(75%);
 }
 
 header a {
-    height: 1.9em;
+    height: 1.8em;
     display: block;
-    background: red;
+    margin-left: .5em;
 }
 
 header a img {
@@ -39,18 +82,23 @@ header a img {
 header button {
     border: none;
     outline: none;
-    background: red;
     width: auto;
-    padding: 0;
+    padding: 1.5em;
     margin: 0;
     display: block;
+    background-color: #F4F4F4;
+}
+
+header button img {
+    width: 20px;
 }
 
 header button svg {
     width: 20px;
+    transition: ease .3s;
 }
 
-header button:hover img {
+header button:hover svg {
     filter: brightness(75%);
 }
 
@@ -196,6 +244,7 @@ nav ul li ul {
 
 .middle-section article img {
     height: 100%;
+    width: auto;
     transition: ease .9s;
 }
 
@@ -218,55 +267,10 @@ nav ul li ul {
 
 /*Overflow hidden werkt niet*/
 .middle-section article:hover .img-wrapper img {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
     transform: scale(1.05);
-}
-
-.middle-section .live-article {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(../images/image4.jpg);
-    background-size: cover;
-    background-position: 30% 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    position: relative;
-    height: 6em;
-    border-radius: 6px;
-    overflow: hidden;
-    margin-top: 1em;
-    transition: .5s ease;
-    border-bottom: none;
-}
-
-.middle-section .live-article:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 0px 10px #333;
-}
-
-.middle-section .live-article h3 {
-    color: white;
-    margin: 1em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.middle-section .live-article div {
-    background-color: #333333;
-    color: white;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: .3em 1em;
-}
-
-.middle-section .live-article div p {
-    font-size: .6em;
-    font-weight: 500;
-    margin: 0;
-}
-
-.middle-section .live-article div p span {
-    color: red;
-    margin-right: 1em;
 }
 
 .image-header-mobile, .image-header-desktop {
@@ -448,6 +452,12 @@ main section footer a svg {
 /*MEDIA QUERIES*/
 
 @media screen and (min-width: 900px) {
+    
+    header div {
+        width: 860px!important;
+        margin: auto;
+    }
+    
     .top-section {
         display: flex;
         flex-direction: row;
