@@ -302,11 +302,6 @@ header button:hover svg {
     transform: scale(1.05);
 }
 
-.image-header-mobile, .image-header-desktop {
-    height: 44vh;
-    width: 100%;
-    object-fit: cover;
-}
 
 
 
@@ -317,6 +312,8 @@ header button:hover svg {
 .detail-section {
     padding: 1em;
 }
+
+
 
 figure {
     display: none;
