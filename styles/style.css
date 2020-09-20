@@ -184,17 +184,49 @@ header button:hover svg {
     margin: 1.5em;
 }
 
-.top-section article .video-icon {
+.liveblog-icon {
+    height: 25px;
+    background: #E61E14;
+    width: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: .6em;
+    bottom: .6em;
+    border-radius: 25px;
+    z-index: 9;
+}
+
+.liveblog-icon p {
+    color: white!important;
+    text-transform: uppercase;
+    font-size: .7em!important;
+    margin: 0!important;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: block!important;
+}
+
+.video-icon {
     width: 25px;
     height: 25px;
     background-color: #E61E14;
-    padding: 8px;
     border-radius: 100%;
-    margin-bottom: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
 }
 
-.top-section .video-icon img {
+.video-icon svg {
     display: block;
+    position: absolute;
+    height: 9px;
+}
+
+.top-section .video-icon {
+    margin-bottom: 1.2em;
 }
 
 .top-section article:hover h2 {
@@ -206,7 +238,7 @@ header button:hover svg {
     font-size: 1.3em;
     font-weight: 500;
     margin: 0;
-    transition: .3s;
+    transition: .3s ease;
 }
 
 .top-section a:first-child article {
@@ -235,6 +267,50 @@ header button:hover svg {
     padding-right: 1em;
 }
 
+.middle-section article:nth-child(4) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(../images/collectie.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 6px;
+    position: relative;
+    transition: ease .3s;
+    height: 88px;
+}
+
+.middle-section article:nth-child(4):hover {
+    transform: scale(1.025);
+}
+
+.middle-section article:nth-child(4) a {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 2em;
+}
+
+.middle-section article:nth-child(4) div {
+    
+}
+
+.middle-section article:nth-child(4) h4 {
+    display: none;
+}
+
+.middle-section article:nth-child(4) h3 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+.collectie-icon {
+    display: none;
+}
+
 .middle-section article {
     border-bottom: 1px solid #f4f4f4;
 }
@@ -242,12 +318,12 @@ header button:hover svg {
 .middle-section article a {
     display: flex;
     align-items: center;
-    padding-top: 1em;
     padding-bottom: 1em;
+    margin-top: 1em;
 }
 
 .middle-section article:last-child {
-    border-bottom: none; 
+    border-bottom: none;
 }
 
 .middle-section article:hover h3 {
@@ -283,28 +359,16 @@ header button:hover svg {
 
 .middle-section article img {
     height: 100%;
-    width: auto;
+    width: 100%;
     transition: ease .9s;
 }
 
-.middle-section article .img-wrapper .video-icon {
-    width: 25px;
-    height: 25px;
-    background-color: #E61E14;
-    padding: 8px;
-    border-radius: 100%;
-    z-index: 1;
+.middle-section .video-icon {
     position: absolute;
-    left: .7em;
-    bottom: .7em;
+    left: .6em;
+    bottom: .6em;
 }
 
-.middle-section article .img-wrapper .video-icon img {
-    display: block;
-}
-
-
-/*Overflow hidden werkt niet*/
 .middle-section article:hover .img-wrapper img {
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
@@ -321,7 +385,8 @@ header button:hover svg {
     padding: 1em;
 }
 
-.image-header-mobile, .image-header-desktop {
+.image-header-mobile,
+.image-header-desktop {
     height: 44vh;
     width: 100%;
     object-fit: cover;
@@ -557,6 +622,11 @@ main section footer a svg {
         color: #e61e14;
     }
 
+    header .header-container nav ul li a:active {
+        border: 1px #e61e14 solid;
+
+    }
+
     header div form input {
         width: 250px;
         opacity: 1;
@@ -590,6 +660,15 @@ main section footer a svg {
         padding-right: 10em;
     }
 
+    .liveblog-icon {
+        left: 1em;
+        bottom: 1em;
+    }
+
+    .middle-section .video-icon {
+        left: 1em;
+        bottom: 1em;
+    }
 
 
     /***************MIDDLE SECTION MQ***************/
@@ -602,6 +681,49 @@ main section footer a svg {
         row-gap: 3em;
         padding-left: 0;
         padding-right: 0;
+        margin-top: 2.5em;
+    }
+
+    .middle-section article:nth-child(4) {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(../images/collectie.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 6px;
+        position: relative;
+        transition: ease .3s;
+        height: auto;
+    }
+
+    .middle-section article:nth-child(4):hover {
+        transform: scale(1.025);
+    }
+
+    .middle-section article:nth-child(4) a {
+        width: 100%;
+        height: 100%;
+    }
+
+    .middle-section article:nth-child(4) div {
+        position: absolute;
+        bottom: 1.3em;
+        left: 1.3em;
+    }
+
+    .middle-section article:nth-child(4) h4 {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: .9em;
+        letter-spacing: 1px;
+        margin: 0;
+        margin-bottom: 1em;
+        display: block;
+    }
+
+    .middle-section article:nth-child(4) h3 {
+        color: white;
+        font-size: 2em;
+        margin: 0;
     }
 
     .middle-section article {
@@ -610,6 +732,7 @@ main section footer a svg {
 
     .middle-section article a {
         display: block;
+        margin-top: 0;
     }
 
     .middle-section article h3 {
@@ -628,13 +751,38 @@ main section footer a svg {
 
     .middle-section article .img-wrapper {
         display: block;
-        height: auto;
+        height: 186px;
         width: 100%;
     }
 
     .middle-section article img {
-        height: auto;
+        height: 100%;
         width: 100%;
+    }
+
+    .collectie-icon {
+        height: 25px;
+        background-color: hsla(0, 0%, 96.1%, 0.2);
+        backdrop-filter: blur(10px);
+        width: 5.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 1em;
+        ;
+        border-radius: 25px;
+        z-index: 9;
+    }
+
+    .collectie-icon p {
+        color: white!important;
+        text-transform: uppercase;
+        font-size: .7em!important;
+        margin: 0!important;
+        font-weight: 500;
+        letter-spacing: 1px;
+        display: block!important;
     }
 
 
