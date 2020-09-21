@@ -740,7 +740,7 @@ main section footer a svg {
         color: white;
         text-transform: uppercase;
         font-weight: 500;
-        font-size: .9em;
+        font-size: .75em;
         letter-spacing: 1px;
         margin: 0;
         margin-bottom: 1em;
@@ -749,7 +749,7 @@ main section footer a svg {
 
     .middle-section article:nth-child(4) h3 {
         color: white;
-        font-size: 2em;
+        font-size: 1.65em;
         margin: 0;
         text-transform: none;
     }
