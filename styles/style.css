@@ -111,6 +111,10 @@ header button svg {
     transition: ease .3s;
 }
 
+header button svg .cls-1 {
+    fill: #a4a4a4;
+}
+
 header button:hover svg {
     filter: brightness(75%);
 }
@@ -288,12 +292,10 @@ header button:hover svg {
     padding: 0;
     display: flex;
     align-items: center;
-    padding-left: 2em;
+    padding-left: 1.5em;
 }
 
-.middle-section article:nth-child(4) div {
-    
-}
+.middle-section article:nth-child(4) div {}
 
 .middle-section article:nth-child(4) h4 {
     display: none;
@@ -305,9 +307,28 @@ header button:hover svg {
     font-weight: 500;
     font-size: 1em;
     letter-spacing: 1px;
+    margin-left: 1em;
 }
 
 .collectie-icon {
+    height: 50px;
+    background-color: hsla(0, 0%, 96.1%, 0.2);
+    backdrop-filter: blur(10px);
+    width: 50px;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    z-index: 9;
+}
+
+.collectie-icon svg {
+    display: block;
+    height: 22px;
+    
+}
+
+.collectie-icon p {
     display: none;
 }
 
@@ -724,6 +745,7 @@ main section footer a svg {
         color: white;
         font-size: 2em;
         margin: 0;
+        text-transform: none;
     }
 
     .middle-section article {
@@ -764,13 +786,12 @@ main section footer a svg {
         height: 25px;
         background-color: hsla(0, 0%, 96.1%, 0.2);
         backdrop-filter: blur(10px);
-        width: 5.5em;
+        width: 7em;
         display: flex;
         align-items: center;
         justify-content: center;
         position: absolute;
         top: 1em;
-        ;
         border-radius: 25px;
         z-index: 9;
     }
@@ -783,6 +804,12 @@ main section footer a svg {
         font-weight: 500;
         letter-spacing: 1px;
         display: block!important;
+    }
+    
+    .collectie-icon svg {
+        display: block;
+        height: 14px;
+        margin-right: .3em!important;
     }
 
 
