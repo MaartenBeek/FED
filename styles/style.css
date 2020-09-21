@@ -295,7 +295,9 @@ header button:hover svg {
     padding-left: 1.5em;
 }
 
-.middle-section article:nth-child(4) div {}
+.middle-section article:nth-child(4) div {
+    
+}
 
 .middle-section article:nth-child(4) h4 {
     display: none;
@@ -308,6 +310,10 @@ header button:hover svg {
     font-size: 1em;
     letter-spacing: 1px;
     margin-left: 1em;
+}
+
+.middle-section article:nth-child(4):hover h3 {
+    color: white;
 }
 
 .collectie-icon {
