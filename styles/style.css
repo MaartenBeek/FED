@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 body {
     margin: 0;
     font-family: Helvetica Neue, sans-serif;
@@ -177,15 +183,43 @@ header button:hover svg {
     transition: ease 1s;
 }
 
-.top-section article:hover {
-    background-size: 125%;
+.top-section article .img-wrapper {
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.top-section article .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    transition: ease .6s;
+}
+
+.top-section article:hover .img-wrapper img {
+    transform: scale(1.025);
+}
+
+.top-section article .img-wrapper .overlay {
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,1));
+    opacity: .3;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transition: ease .3s;
+}
+
+.top-section article:hover .img-wrapper .overlay {
+    opacity: .6;
 }
 
 .top-article-heading {
     position: absolute;
     bottom: 0;
-    left: 0;
-    margin: 1.5em;
+    margin: 1.3em 1em;
+    z-index: 100;
 }
 
 .liveblog-icon {
@@ -246,11 +280,11 @@ header button:hover svg {
 }
 
 .top-section a:first-child article {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../images/detail-image.jpg);
+/*    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../images/detail-image.jpg);*/
 }
 
 .top-section a:nth-child(2) article {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../images/image2.jpg);
+/*    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../images/image2.jpg);*/
 }
 
 
@@ -263,7 +297,7 @@ header button:hover svg {
     margin: auto;
     margin-top: 1em;
     display: grid;
-    grid-template-columns: 1fr;
+/*    grid-template-columns: 1fr;*/
     grid-template-rows: auto;
     column-gap: 2em;
     row-gap: 0em;
@@ -299,7 +333,7 @@ header button:hover svg {
     
 }
 
-.middle-section article:nth-child(4) h4 {
+.middle-section article:nth-child(4) p {
     display: none;
 }
 
@@ -388,6 +422,7 @@ header button:hover svg {
     height: 100%;
     width: 100%;
     transition: ease .9s;
+    object-fit: cover;
 }
 
 .middle-section .video-icon {
@@ -401,6 +436,79 @@ header button:hover svg {
     -moz-transform: scale(1.05);
     -o-transform: scale(1.05);
     transform: scale(1.05);
+}
+
+
+
+
+/***************SLIDER***************/
+
+main h4 {
+    padding: 1em;
+    margin: 0;
+    margin-top: 1em;
+    color: #333333;
+}
+
+main h4 span {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #666666;
+    font-size: .9em;
+    margin-left: .7em;
+}
+
+main section:nth-of-type(3) {
+    background: #212121;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    width: 100%;
+    height: 40vh;
+}
+
+main section:nth-of-type(3) article {
+    width: 100%;
+    scroll-snap-align: center;
+    flex: 0 0 100%;
+    position: relative;
+}
+
+main section:nth-of-type(3) article:first-of-type {
+    display: none;
+}
+    
+main section:nth-of-type(3) article:last-of-type {
+    display: none;
+}
+
+main section:nth-of-type(3) article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main section:nth-of-type(3) article div {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    background: red;
+    bottom: 0;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+}
+
+main section:nth-of-type(3) article div h5 {
+    margin: 0;
+    color: white;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+main section:nth-of-type(3) article div p {
+    display: none;
 }
 
 
@@ -526,7 +634,9 @@ main section footer a svg {
     height: 1em;
 }
 
-
+main ul:last- {
+    display: none;
+}
 
 
 /***************FOOTER***************/
@@ -668,23 +778,21 @@ main section footer a svg {
         flex-direction: row;
         height: 45vh;
     }
+    
     .top-section a {
         height: 100%;
     }
+    
     .top-article-heading {
         margin: 0;
         width: 100%;
+        font-size: 1.5em;
+        padding: 1em 1.2em;
+        max-width: 24em;
     }
+
     .text-align-right {
-        font-size: 1.5em;
-        padding: 1.5em;
-        padding-left: 10em;
-        text-align: right;
-    }
-    .text-align-left {
-        font-size: 1.5em;
-        padding: 1.5em;
-        padding-right: 10em;
+        right: 0;
     }
 
     .liveblog-icon {
@@ -702,13 +810,14 @@ main section footer a svg {
     .middle-section {
         max-width: 66em;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+/*        grid-template-columns: 1fr 1fr 1fr;*/
         grid-template-rows: auto;
         column-gap: 2em;
         row-gap: 3em;
         padding-left: 0;
         padding-right: 0;
-        margin-top: 2.5em;
+        margin-top: 3em;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) ) ;
     }
 
     .middle-section article:nth-child(4) {
@@ -736,7 +845,7 @@ main section footer a svg {
         left: 1.3em;
     }
 
-    .middle-section article:nth-child(4) h4 {
+    .middle-section article:nth-child(4) p {
         color: white;
         text-transform: uppercase;
         font-weight: 500;
@@ -817,10 +926,60 @@ main section footer a svg {
         height: 14px;
         margin-right: .3em!important;
     }
+    
+    
+    
+    
+    /***************SLIDER MQ***************/
+    
+    main h4 {
+        padding: 1em;
+        padding-left: 0;
+        padding-right: 0;
+        margin: auto;
+        margin-top: 3em;
+        color: #333333;
+        max-width: 66em;
+    }
+    
+    main section:nth-of-type(3) {
+        height: 55vh;
+    }
 
+    main section:nth-of-type(3) article {
+        width: 100%;
+        flex: 0 0 55%;
+    }
+    
+    main section:nth-of-type(3) article:first-of-type {
+        flex: 0 0 22.5%;
+        display: block;
+    }
+    
+    main section:nth-of-type(3) article:last-of-type {
+        flex: 0 0 22.5%;
+        display: block;
+    }
+
+    main section:nth-of-type(3) article div {
+        padding: 2em;
+    }
+
+    main section:nth-of-type(3) article div h5 {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    main section:nth-of-type(3) article div p {
+        display: block;
+        color: white;
+        margin: 0;
+        margin-top: .7em;
+    }
 
 
     /***************DETAIL SECTION MQ***************/
+    
     .detail-section {
         margin: auto;
         padding-left: 6em;

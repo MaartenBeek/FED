@@ -8,7 +8,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ## Bronnenlijst
 1. nos.nl
 2. https://webdevetc.com/blog/how-to-add-a-gradient-overlay-to-a-background-image-using-just-css-and-html
-3. -...-
+3. https://codepen.io/maartenbeek/pen/jOqXOmR
 
 
 
