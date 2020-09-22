@@ -557,9 +557,9 @@ figure {
 .detail-section h3 {
     margin: 0;
     margin-top: 2em;
-    ;
     font-size: 1em;
     line-height: 0;
+    color: #333333;
 }
 
 .detail-section p {
