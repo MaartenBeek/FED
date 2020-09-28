@@ -252,9 +252,37 @@ header button:hover svg {
     background-color: #E61E14;
     border-radius: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     z-index: 9;
+    justify-content: center;
+}
+
+article:hover .video-icon {
+    animation-name: bounce;
+    animation-duration: .7s;
+    animation-iteration-count: 1;
+    transform-origin: bottom center;
+}
+
+@keyframes bounce {
+    0% {
+        transform: none;
+    }
+    15% {
+        transform: scale(1.2, .8);
+    }
+    30% {
+        transform: scale(.6, 1.6) translateY(-2em);
+    }
+    60% {
+        transform: scale(1.4, .6) translateY(0);
+    }
+    80% {
+        transform: scale(.8, 1.2);
+    }
+    100% {
+        transform: none;
+    }
 }
 
 .video-icon svg {
