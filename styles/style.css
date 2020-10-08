@@ -12,9 +12,110 @@
     background: transparent; /* make scrollbar transparent */
 }
 
+
+
+
+/***************KLEUREN***************/
+
+:root {
+    --nos-rood: #E61E14;
+    --background-body: #ffffff;
+    --background-01: #F4F4F4;
+    --background-02: #212121;
+    --tekst: #333333;
+    --tekst-detail: #999999;
+    --border: #e3e3e3;
+    --details: #666666;
+    --link: #4073A3;
+}
+
+[data-theme="dark"] {
+    --nos-rood: #E61E14;
+    --background-body: #212121;
+    --background-01: #1B1B1B;
+    --background-02: #1B1B1B;
+    --tekst: #999999;
+    --tekst-detail: #999999;
+    --border: #666666;
+    --details: #666666;
+    --link: #4073A3;
+}
+
+
+
+
+/***************TOGGLE SWITCH***************/
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+/*    position: absolute;*/
+    bottom: 1.5em;
+    left: 1.5em;
+}
+
+.theme-switch-wrapper em {
+    color: var(--tekst);
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 1.6em;
+    position: relative;
+    width: 3.3em;
+    margin-right: .7em;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: .3em;
+    content: "";
+    height: 1em;
+    left: .3em;
+    position: absolute;
+    transition: .4s;
+    width: 1em;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+/***************MAIN***************/
+
 body {
     margin: 0;
     font-family: Helvetica Neue, sans-serif;
+    background: var(--background-body);
 }
 
 a {
@@ -27,7 +128,7 @@ a {
 /***************HEADER***************/
 
 header {
-    background-color: #F4F4F4;
+    background-color: var(--background-01);
     height: 4.2em;
     display: flex;
 }
@@ -105,7 +206,7 @@ header button {
     padding: 1.5em;
     margin: 0;
     display: block;
-    background-color: #F4F4F4;
+    background-color: var(--background-01);
 }
 
 header button img {
@@ -118,7 +219,7 @@ header button svg {
 }
 
 header button svg .cls-1 {
-    fill: #a4a4a4;
+    fill: var(--tekst-detail);
 }
 
 header button:hover svg {
@@ -146,10 +247,10 @@ header button:hover svg {
 
 #navigation ul li {
     list-style: none;
-    background-color: #F4F4F4;
+    background-color: var(--background-01);
     padding: 1.2em;
-    border-top: 1px solid #e3e3e3;
-    color: #333333;
+    border-top: 1px solid var(--border);
+    color: var(--tekst);
 }
 
 #navigation ul li ul {
@@ -224,7 +325,7 @@ header button:hover svg {
 
 .liveblog-icon {
     height: 25px;
-    background: #E61E14;
+    background: var(--nos-rood);
     width: 5em;
     display: flex;
     align-items: center;
@@ -249,7 +350,7 @@ header button:hover svg {
 .video-icon {
     width: 25px;
     height: 25px;
-    background-color: #E61E14;
+    background-color: var(--nos-rood);
     border-radius: 100%;
     display: flex;
     align-items: center;
@@ -416,7 +517,7 @@ article:hover .video-icon {
 }
 
 .middle-section article {
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid var(--border);
 }
 
 .middle-section article a {
@@ -431,17 +532,17 @@ article:hover .video-icon {
 }
 
 .middle-section article:hover h3 {
-    color: #e61e14;
+    color: var(--nos-rood);
 }
 
 .middle-section article a {
-    color: #333333
+    color: var(--tekst);
 }
 
 .middle-section article h3 {
     margin: 0;
     font-weight: 500;
-    color: #333333;
+    color: var(--tekst);
     font-size: 1em;
     transition: ease .3s;
 }
@@ -490,19 +591,19 @@ main h4 {
     padding: 1em;
     margin: 0;
     margin-top: 1em;
-    color: #333333;
+    color: var(--tekst);
 }
 
 main h4 span {
     font-weight: 400;
     text-transform: uppercase;
-    color: #666666;
+    color: var(--details);
     font-size: .9em;
     margin-left: .7em;
 }
 
 main section:nth-of-type(3) {
-    background: #212121;
+    background: var(--background-02);
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     display: flex;
@@ -579,7 +680,7 @@ figure {
     padding: 0;
     font-size: 1.6em;
     line-height: 1.3em;
-    color: #333333;
+    color: var(--tekst);
 }
 
 .detail-section h3 {
@@ -587,16 +688,16 @@ figure {
     margin-top: 2em;
     font-size: 1em;
     line-height: 0;
-    color: #333333;
+    color: var(--tekst);
 }
 
 .detail-section p {
-    color: #333333;
+    color: var(--tekst);
     line-height: 1.7em;
 }
 
 .detail-section p a {
-    color: #4073A3;
+    color: var(--link);
 }
 
 .detail-section p a:hover {
@@ -610,8 +711,8 @@ figure {
 
 .detail-section a p {
     padding-left: 1em;
-    border-left: 1px solid #d8d8d8;
-    color: #4073A3;
+    border-left: 1px solid var(--border);
+    color: var(--link);
 }
 
 .article-meta {
@@ -621,11 +722,11 @@ figure {
     letter-spacing: 1px;
     margin-bottom: 2.2em;
     margin-top: .8em;
-    color: #999999
+    color: var(--tekst-detail);
 }
 
 .article-meta span:first-child {
-    color: #333;
+    color: var(--tekst);
 }
 
 .article-meta .dot {
@@ -648,7 +749,7 @@ figure {
 .credits p:first-child {
     font-size: .8em;
     margin: 0;
-    color: #333333;
+    color: var(--tekst);
     font-weight: 600;
     line-height:
 }
@@ -656,7 +757,7 @@ figure {
 .credits p:nth-child(2) {
     font-size: .7em;
     margin: 0;
-    color: #999999;
+    color: var(--tekst-detail);
     line-height: 1.5em;
 }
 
@@ -665,12 +766,12 @@ main section footer {
 }
 
 main section footer span {
-    color: #333333;
+    color: var(--tekst);
 }
 
 main section footer a {
     padding: .5em;
-    color: #666666
+    color: var(--details);
 }
 
 main section footer a svg {
@@ -688,8 +789,8 @@ main ul:last- {
     padding: 1em;
     margin-top: 2em;
     width: 100%;
-    background-color: #fafafa;
-    border-top: 1px solid #e3e3e3;
+    background-color: var(--background-01);
+    border-top: 1px solid var(--border);
 }
 
 .pagefooter div {
@@ -714,7 +815,7 @@ main ul:last- {
 }
 
 .pagefooter div ul li a {
-    color: #333333;
+    color: var(--tekst);
     display: block;
     padding-top: .5em;
     padding-bottom: .5em;
@@ -722,23 +823,23 @@ main ul:last- {
 }
 
 .pagefooter div ul li a:hover {
-    color: #E61E14;
+    color: var(--nos-rood);
 }
 
 .pagefooter div section {
-    border-top: 1px solid #e3e3e3;
+    border-top: 1px solid var(--border);
     margin-top: 1em;
 }
 
 .pagefooter div section a {
-    color: #999999;
+    color: var(--tekst-detail);
     font-size: .9em;
     margin-top: 1em;
     display: block;
 }
 
 .pagefooter div section p {
-    color: #999999;
+    color: var(--tekst-detail);
     font-size: .9em;
     display: block;
     margin-top: 1em;
@@ -751,7 +852,13 @@ main ul:last- {
 
 @media screen and (min-width: 900px) {
 
-
+    .theme-switch-wrapper {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 1.5em;
+        left: 1.5em;
+    }
 
     /***************HEADER MQ***************/
     header div {
@@ -790,20 +897,20 @@ main ul:last- {
         padding-left: 1.2em;
         width: 6em;
         margin: 0;
-        color: #333333;
+        color: var(--tekst);
         line-height: 4.2em;
         height: 100%;
-        border-left: 1px #e3e3e3 solid;
+        border-left: 1px var(--border) solid;
         transition: ease .3s;
     }
 
     header .header-container nav ul li a:hover {
-        border-left: 1px #e61e14 solid;
-        color: #e61e14;
+        border-left: 1px var(--nos-rood) solid;
+        color: var(--nos-rood);
     }
 
     header .header-container nav ul li a:active {
-        border: 1px #e61e14 solid;
+        border: 1px var(--nos-rood) solid;
 
     }
 
@@ -919,7 +1026,7 @@ main ul:last- {
     }
 
     .middle-section article p {
-        color: #333333;
+        color: var(--tekst);
         font-size: 1em;
         line-height: 1.5em;
         margin: 0;
@@ -979,7 +1086,7 @@ main ul:last- {
         padding-right: 0;
         margin: auto;
         margin-top: 3em;
-        color: #333333;
+        color: var(--tekst);
         max-width: 66em;
     }
     
@@ -1044,14 +1151,14 @@ main ul:last- {
     figure figcaption {
         margin-top: 1em;
         padding-left: 1.5em;
-        border-left: 1px solid #d8d8d8;
-        color: #333333;
+        border-left: 1px solid var(--border);
+        color: var(--tekst);
     }
 
     figure figcaption span {
         font-size: .8em;
         font-weight: 700;
-        color: #999999;
+        color: var(--tekst-detail);
         margin-left: .5em;
     }
 

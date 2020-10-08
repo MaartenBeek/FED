@@ -9,6 +9,8 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 1. nos.nl
 2. https://webdevetc.com/blog/how-to-add-a-gradient-overlay-to-a-background-image-using-just-css-and-html
 3. https://codepen.io/maartenbeek/pen/jOqXOmR
+4. https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
+5.https://developer.mozilla.org/en-US/docs/Web/CSS/--*
 
 
 
@@ -24,8 +26,9 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Voortgang 3 (week 6)
 
--same as voortgang 1-
-
+* Er moeten nog een aantal states worden toegevoegd.
+* Na dit gesprek variabelen voor kleuren toegevoegd aan mijn CSS, om hiermee een darkmode te maken.
+* Darkmode is gelukt om te maken. Heb een goede bron gevonden die werkte met css variables. 
 
 
 ## Voortgang 2 (week 5)
