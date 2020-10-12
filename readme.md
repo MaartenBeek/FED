@@ -28,7 +28,8 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 * Er moeten nog een aantal states worden toegevoegd.
 * Na dit gesprek variabelen voor kleuren toegevoegd aan mijn CSS, om hiermee een darkmode te maken.
-* Darkmode is gelukt om te maken. Heb een goede bron gevonden die werkte met css variables. 
+* Darkmode is gelukt om te maken. Heb een goede bron gevonden die werkte met css variables.
+* Heb mijn kleuren systeem behoorlijk moeten ombouwen naar variables, maar het werkt nu goed met darkmode en het is overzichtelijker.
 
 
 ## Voortgang 2 (week 5)

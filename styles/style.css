@@ -895,13 +895,17 @@ main ul:last- {
     header .header-container nav ul li a {
         padding: 0;
         padding-left: 1.2em;
-        width: 6em;
+        padding-right: 3.5em;
         margin: 0;
         color: var(--tekst);
         line-height: 4.2em;
         height: 100%;
         border-left: 1px var(--border) solid;
         transition: ease .3s;
+    }
+    
+    header .header-container nav ul li:last-of-type a {
+        padding-right: 1.2em;
     }
 
     header .header-container nav ul li a:hover {
@@ -910,12 +914,13 @@ main ul:last- {
     }
 
     header .header-container nav ul li a:active {
-        border: 1px var(--nos-rood) solid;
+        background: var(--nos-rood);
+        color: white;
 
     }
 
     header div form input {
-        width: 250px;
+        width: 20em;
         opacity: 1;
         transform: scale(1);
     }
