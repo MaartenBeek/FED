@@ -67,8 +67,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Verslag van meeting
 
--na afloop snel uitkomsten vastleggen-
-
+* Antwoord op mijn vragen gehad. Ik kan zonder problemen verder werken aan mijn opdracht.
 
 
 ## Intake (week 1)
