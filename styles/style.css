@@ -9,7 +9,7 @@
 ::-webkit-scrollbar {
     width: 0px;
     height: 0px;
-    background: transparent; /* make scrollbar transparent */
+    background: transparent;
 }
 
 
@@ -110,7 +110,8 @@ input:checked + .slider:before {
 
 
 
-/***************MAIN***************/
+
+/***************BODY***************/
 
 body {
     margin: 0;
@@ -231,7 +232,7 @@ header button:hover svg {
 
 /***************NAVIGATION***************/
 
-#navigation {
+nav {
     overflow: hidden;
     height: 0;
 }
@@ -240,12 +241,12 @@ header button:hover svg {
     height: 100%!important;
 }
 
-#navigation ul {
+nav ul {
     margin: 0;
     padding: 0;
 }
 
-#navigation ul li {
+nav ul li {
     list-style: none;
     background-color: var(--background-01);
     padding: 1.2em;
@@ -253,7 +254,7 @@ header button:hover svg {
     color: var(--tekst);
 }
 
-#navigation ul li ul {
+nav ul li ul {
     display: none;
 }
 
@@ -778,9 +779,7 @@ main section footer a svg {
     height: 1em;
 }
 
-main ul:last- {
-    display: none;
-}
+
 
 
 /***************FOOTER***************/
@@ -860,7 +859,11 @@ main ul:last- {
         left: 1.5em;
     }
 
+    
+    
+    
     /***************HEADER MQ***************/
+    
     header div {
         width: 66em!important;
         margin: auto;
@@ -925,9 +928,11 @@ main ul:last- {
         transform: scale(1);
     }
 
+    
 
 
     /***************TOP SECTION MQ***************/
+    
     .top-section {
         display: flex;
         flex-direction: row;
@@ -960,6 +965,8 @@ main ul:last- {
         bottom: 1em;
     }
 
+    
+    
 
     /***************MIDDLE SECTION MQ***************/
     
@@ -1130,6 +1137,8 @@ main ul:last- {
         margin-top: .7em;
     }
 
+    
+    
 
     /***************DETAIL SECTION MQ***************/
     

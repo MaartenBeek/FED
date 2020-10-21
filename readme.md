@@ -6,21 +6,27 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 
 ## Bronnenlijst
-1. nos.nl
+1. https://nos.nl/
 2. https://webdevetc.com/blog/how-to-add-a-gradient-overlay-to-a-background-image-using-just-css-and-html
 3. https://codepen.io/maartenbeek/pen/jOqXOmR
 4. https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
-5.https://developer.mozilla.org/en-US/docs/Web/CSS/--*
+5. https://developer.mozilla.org/en-US/docs/Web/CSS/--*
 
 
 
 ## Eindgesprek (week 7/8)
 
--dit ging goed & dit was lastig-
+* Variabelen toevoegen aan mijn CSS ging goed. Heb er vervolgens aan de hand van een goede bron een darkmodus aan kunnen koppelen. 
+
+* Heb de states van de nav elementen verbeterd.
+
+
 
 **Screenshot(s):**
 
--screenshot(s) van je eindresultaat-
+![screenshot(s) die een goed beeld geven van de website die je gaat maken](images/screenshot_dark.png)
+
+![screenshot(s) die een goed beeld geven van de website die je gaat maken](images/screenshot_light.png)
 
 
 
